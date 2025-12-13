@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Contact from '../components/Contact';
 import { products } from '../data/products';
-
+import Products from './Products';
 const Home = () => {
   const scrollToProducts = () => {
     const productsSection = document.getElementById('products');
@@ -13,45 +13,38 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 text-white pt-20 relative overflow-hidden">
+      <section id="home" className="min-h-screen flex items-end text-white pt-20 relative overflow-hidden">
+        {/* Background Image */}
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-sm scale-105"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            backgroundImage: `url("/Images/SELECTED/pcb.jpg")`
           }}
         ></div>
-        <div className="max-w-7xl mx-auto px-5 py-20 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in-up">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight bg-gradient-to-r from-white to-emerald-100 bg-clip-text text-transparent">
+        {/* Gradient Overlay */}
+        <div className="max-w-7xl mx-auto px-5 pt-10 pb-32 relative z-10 w-full">
+          <div className="flex justify-center items-center">
+            <div className="space-y-6 animate-fade-in-up max-w-2xl text-center">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.8)] [text-shadow:_0_0_30px_rgba(16,185,129,0.6),_0_0_60px_rgba(20,184,166,0.4)]">
                 Suryatantra Enterprises LLP
               </h1>
-              <p className="text-xl md:text-2xl font-medium text-emerald-50">
+              <p className="text-xl md:text-2xl font-small text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] [text-shadow:_0_0_20px_rgba(16,185,129,0.5)]">
                 Empowering PCB Manufacturers with Top-Quality Supplies
               </p>
-              <p className="text-lg text-emerald-100 leading-relaxed">
+              <p className="text-lg text-emerald-50 leading-relaxed drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
                 Explore our comprehensive range of precision machining tools and components for PCB manufacturing. 
                 From drilling solutions to routing equipment, we provide exceptional quality and cost-effective products.
               </p>
-              <button 
-                onClick={scrollToProducts}
-                className="group relative bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 overflow-hidden"
-              >
-                <span className="relative z-10 flex items-center gap-2">
-                  Explore More
-                  <i className="fas fa-arrow-down group-hover:translate-y-1 transition-transform duration-300"></i>
-                </span>
-                <span className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </button>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                <img 
-                  src="/Images/SELECTED/0Y6A82989.png" 
-                  alt="Suryatantra Hero Image" 
-                  className="relative w-full max-w-md rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                />
+              <div className="flex justify-center">
+                <button 
+                  onClick={scrollToProducts}
+                  className="group relative bg-white/10 backdrop-blur-sm border-2 border-white/50 hover:bg-white hover:border-white text-white hover:text-emerald-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-500 shadow-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Explore More
+                    <i className="fas fa-arrow-down group-hover:translate-y-2 group-hover:animate-bounce transition-transform duration-300"></i>
+                  </span>
+                </button>
               </div>
             </div>
           </div>
@@ -59,7 +52,7 @@ const Home = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-24 bg-gradient-to-b from-white to-emerald-50/30">
+      {/* <section id="products" className="py-24 bg-gradient-to-b from-white to-emerald-50/30">
         <div className="max-w-7xl mx-auto px-5">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">
@@ -101,10 +94,12 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+<Products />
 
       {/* Components Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 via-emerald-50/20 to-teal-50/20">
+      <section className="py-24 bg-gradient-to-br from-emerald-50/50 via-white to-teal-50/50">
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">

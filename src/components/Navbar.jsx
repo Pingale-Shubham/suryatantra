@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,24 @@ const Navbar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const isActive = (path) => location.pathname === path;
+
+  const scrollToContact = () => {
+    closeMenu();
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -33,54 +52,50 @@ const Navbar = () => {
             />
           </Link>
           
-          <ul className={`hidden md:flex items-center gap-8`}>
+          <ul className={`hidden md:flex items-center gap-3`}>
             <li>
               <Link 
                 to="/" 
-                className={`font-medium transition-all duration-300 relative group ${
-                  isActive('/') ? 'text-emerald-600' : 'text-gray-800'
-                } hover:text-emerald-600`}
+                className={`px-5 py-2 rounded-full font-medium transition-all duration-500 ${
+                  isActive('/') 
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
+                    : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent hover:shadow-lg hover:scale-105'
+                }`}
               >
                 Home
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 ${
-                  isActive('/') ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
               </Link>
             </li>
             <li>
               <Link 
                 to="/about" 
-                className={`font-medium transition-all duration-300 relative group ${
-                  isActive('/about') ? 'text-emerald-600' : 'text-gray-800'
-                } hover:text-emerald-600`}
+                className={`px-5 py-2 rounded-full font-medium transition-all duration-500 ${
+                  isActive('/about') 
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
+                    : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent hover:shadow-lg hover:scale-105'
+                }`}
               >
                 About
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 ${
-                  isActive('/about') ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
               </Link>
             </li>
             <li>
               <Link 
                 to="/products" 
-                className={`font-medium transition-all duration-300 relative group ${
-                  isActive('/products') ? 'text-emerald-600' : 'text-gray-800'
-                } hover:text-emerald-600`}
+                className={`px-5 py-2 rounded-full font-medium transition-all duration-500 ${
+                  isActive('/products') 
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
+                    : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent hover:shadow-lg hover:scale-105'
+                }`}
               >
                 Products
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 ${
-                  isActive('/products') ? 'w-full' : 'w-0 group-hover:w-full'
-                }`}></span>
               </Link>
             </li>
             <li>
-              <a 
-                href="#contact" 
-                className="font-medium text-gray-800 hover:text-emerald-600 transition-all duration-300 relative group"
+              <button 
+                onClick={scrollToContact}
+                className="px-5 py-2 rounded-full font-medium bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent hover:shadow-lg hover:scale-105 transition-all duration-500"
               >
                 Contact
-                <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </button>
             </li>
           </ul>
 
@@ -97,26 +112,53 @@ const Navbar = () => {
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <ul className="flex flex-col gap-4 py-4">
+          <ul className="flex flex-col gap-3 py-4">
             <li>
-              <Link to="/" onClick={closeMenu} className="block py-2 font-medium text-gray-800 hover:text-emerald-600 transition-colors duration-300 hover:translate-x-2">
+              <Link 
+                to="/" 
+                onClick={closeMenu} 
+                className={`block px-4 py-2.5 rounded-full font-medium transition-all duration-500 ${
+                  isActive('/') 
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
+                    : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
+                }`}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={closeMenu} className="block py-2 font-medium text-gray-800 hover:text-emerald-600 transition-colors duration-300 hover:translate-x-2">
+              <Link 
+                to="/about" 
+                onClick={closeMenu} 
+                className={`block px-4 py-2.5 rounded-full font-medium transition-all duration-500 ${
+                  isActive('/about') 
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
+                    : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
+                }`}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link to="/products" onClick={closeMenu} className="block py-2 font-medium text-gray-800 hover:text-emerald-600 transition-colors duration-300 hover:translate-x-2">
+              <Link 
+                to="/products" 
+                onClick={closeMenu} 
+                className={`block px-4 py-2.5 rounded-full font-medium transition-all duration-500 ${
+                  isActive('/products') 
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
+                    : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
+                }`}
+              >
                 Products
               </Link>
             </li>
             <li>
-              <a href="#contact" onClick={closeMenu} className="block py-2 font-medium text-gray-800 hover:text-emerald-600 transition-colors duration-300 hover:translate-x-2">
+              <button 
+                onClick={scrollToContact}
+                className="block w-full text-left px-4 py-2.5 rounded-full font-medium bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent transition-all duration-500"
+              >
                 Contact
-              </a>
+              </button>
             </li>
           </ul>
         </div>

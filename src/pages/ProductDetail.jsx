@@ -27,13 +27,13 @@ const ProductDetail = () => {
 
   if (!product && !productInfo) {
     return (
-      <section className="pt-24 pb-16 bg-slate-50 min-h-screen">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-emerald-50/50 via-white to-teal-50/50 min-h-screen">
         <div className="max-w-4xl mx-auto px-5 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Product Not Found</h2>
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">Product Not Found</h2>
           <p className="text-slate-600 mb-8">The product you're looking for doesn't exist.</p>
           <Link 
             to="/products"
-            className="inline-flex items-center gap-2 bg-slate-600 hover:bg-slate-700 text-white px-6 py-3 rounded-full font-semibold transition-all"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 rounded-full font-semibold transition-all"
           >
             <i className="fas fa-arrow-left"></i> Back to Products
           </Link>
@@ -49,10 +49,10 @@ const ProductDetail = () => {
     ).join(' ');
 
     return (
-      <section className="pt-24 pb-16 bg-slate-50 min-h-screen">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-emerald-50/50 via-white to-teal-50/50 min-h-screen">
         <div className="max-w-4xl mx-auto px-5">
-          <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-            <h1 className="text-4xl font-bold text-slate-900 mb-4">{productName}</h1>
+          <div className="bg-white rounded-2xl shadow-xl p-8 text-center border border-emerald-100">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">{productName}</h1>
             <p className="text-xl text-slate-600 mb-6">Contact us for detailed information and pricing</p>
             <p className="text-slate-600 mb-8 leading-relaxed">
               We offer high-quality {productName.toLowerCase()} solutions for your PCB manufacturing needs. 
@@ -61,8 +61,8 @@ const ProductDetail = () => {
               pricing, and availability.
             </p>
 
-            <div className="bg-slate-50 p-6 rounded-xl mb-8">
-              <h4 className="text-xl font-semibold text-slate-900 mb-4">Get More Information</h4>
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl mb-8 border border-emerald-100">
+              <h4 className="text-xl font-semibold text-emerald-700 mb-4">Get More Information</h4>
               <p className="text-slate-600">
                 Our sales team is ready to provide you with detailed product information, 
                 technical specifications, pricing, and delivery options. Get in touch with us today!
@@ -78,7 +78,7 @@ const ProductDetail = () => {
               </button>
               <button 
                 onClick={scrollToContact}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
               >
                 <i className="fas fa-envelope"></i> Contact Us
               </button>
@@ -96,11 +96,11 @@ const ProductDetail = () => {
   }
 
   return (
-    <section className="pt-24 pb-16 bg-slate-50 min-h-screen">
+    <section className="pt-24 pb-16 bg-gradient-to-br from-emerald-50/50 via-white to-teal-50/50 min-h-screen">
       <div className="max-w-7xl mx-auto px-5">
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-100">
           <div className="grid md:grid-cols-2 gap-8 p-8">
-            <div className="w-full h-96 md:h-[500px] rounded-xl bg-slate-50 overflow-hidden flex items-center justify-center">
+            <div className="w-full h-96 md:h-[500px] rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 overflow-hidden flex items-center justify-center">
               <img 
                 src={product.image} 
                 alt={product.name}
@@ -110,25 +110,25 @@ const ProductDetail = () => {
             
             <div className="flex flex-col justify-center space-y-6">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">{product.name}</h1>
+                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">{product.name}</h1>
                 <p className="text-xl text-slate-600 mb-4">{product.subtitle}</p>
                 <p className="text-lg text-slate-600 leading-relaxed">{product.description}</p>
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold text-slate-900 mb-4">Key Features</h4>
+                <h4 className="text-xl font-semibold text-emerald-700 mb-4">Key Features</h4>
                 <ul className="space-y-2">
                   {product.features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3 text-slate-600">
-                      <i className="fas fa-check text-blue-600 mt-1"></i>
+                      <i className="fas fa-check text-emerald-600 mt-1"></i>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-slate-50 p-6 rounded-xl">
-                <h4 className="text-xl font-semibold text-slate-900 mb-4">Specifications</h4>
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl border border-emerald-100">
+                <h4 className="text-xl font-semibold text-emerald-700 mb-4">Specifications</h4>
                 <div className="grid grid-cols-2 gap-4">
                   {Object.entries(product.specifications).map(([key, value]) => (
                     <div key={key} className="flex flex-col">
@@ -148,7 +148,7 @@ const ProductDetail = () => {
                 </button>
                 <button 
                   onClick={scrollToContact}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
                 >
                   <i className="fas fa-envelope"></i> Contact Us
                 </button>
