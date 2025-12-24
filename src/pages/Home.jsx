@@ -1,14 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Contact from '../components/Contact';
-import { products } from '../data/products';
 import Products from './Products';
 const Home = () => {
-  const scrollToProducts = () => {
-    const productsSection = document.getElementById('products');
-    if (productsSection) {
-      productsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <>
@@ -37,12 +31,12 @@ const Home = () => {
               </p>
               <div className="flex justify-center">
                 <button 
-                  onClick={scrollToProducts}
-                  className="group relative bg-white/10 backdrop-blur-sm border-2 border-white/50 hover:bg-white hover:border-white text-white hover:text-emerald-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-500 shadow-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 overflow-hidden"
+                  onClick={() => navigate('/about')}
+                  className="group relative bg-white/10 backdrop-blur-sm border-2 border-white/50 hover:bg-white hover:border-white text-white hover:text-emerald-600 px-8 py-4 md:px-8 md:py-4 rounded-full text-lg font-semibold transition-all duration-500 shadow-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 overflow-hidden min-h-[48px] min-w-[160px] flex items-center justify-center"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Explore More
-                    <i className="fas fa-arrow-down group-hover:translate-y-2 group-hover:animate-bounce transition-transform duration-300"></i>
+                    <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
                   </span>
                 </button>
               </div>
@@ -125,7 +119,7 @@ const Home = () => {
                 <img 
                   src="/Images/SELECTED/pmt.jpg" 
                   alt="Precision Machining Tools" 
-                  className="relative w-full max-w-lg rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                  className="hidden md:block relative w-full max-w-lg rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>

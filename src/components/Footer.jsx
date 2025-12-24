@@ -12,33 +12,33 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-5 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-emerald-400">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Home</Link></li>
-              <li><Link to="/about" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">About Us</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Products</Link></li>
-              <li><a href="#contact" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Contact Us</a></li>
+            <h3 className="text-lg md:text-xl font-semibold mb-4 text-emerald-400">Quick Links</h3>
+            <ul className="space-y-3 md:space-y-2">
+              <li><Link to="/" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Home</Link></li>
+              <li><Link to="/about" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">About Us</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Products</Link></li>
+              <li><a href="#contact" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Contact Us</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-emerald-400">Products</h3>
-            <ul className="space-y-2">
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Drills</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Routers</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">V Cut Blades</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Routing Brushes</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Locating Pins</Link></li>
+            <h3 className="text-lg md:text-xl font-semibold mb-4 text-emerald-400">Products</h3>
+            <ul className="space-y-3 md:space-y-2">
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Drills</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Routers</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">V Cut Blades</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Routing Brushes</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Locating Pins</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-emerald-400">More Products</h3>
-            <ul className="space-y-2">
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Carlson Pins</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Spindle and Spares</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Rings Setting Machine</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">DLR</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Drill Rings</Link></li>
-              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block">Bearing</Link></li>
+            <h3 className="text-lg md:text-xl font-semibold mb-4 text-emerald-400">More Products</h3>
+            <ul className="space-y-3 md:space-y-2">
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Carlson Pins</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Spindle and Spares</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Rings Setting Machine</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">DLR</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Drill Rings</Link></li>
+              <li><Link to="/products" className="text-slate-400 hover:text-emerald-400 transition-colors duration-300 hover:translate-x-1 inline-block py-2 px-1 min-h-[44px] flex items-center">Bearing</Link></li>
             </ul>
           </div>
         </div>

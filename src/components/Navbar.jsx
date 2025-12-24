@@ -100,8 +100,9 @@ const Navbar = () => {
           </ul>
 
           <button 
-            className="md:hidden flex flex-col gap-1.5 cursor-pointer"
+            className="md:hidden flex flex-col gap-1.5 cursor-pointer p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
             <span className={`w-6 h-0.5 bg-gray-800 transition-all ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
             <span className={`w-6 h-0.5 bg-gray-800 transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></span>
@@ -110,14 +111,14 @@ const Navbar = () => {
         </div>
 
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
         }`}>
-          <ul className="flex flex-col gap-3 py-4">
+          <ul className="flex flex-col gap-4 py-4 px-2">
             <li>
               <Link 
                 to="/" 
                 onClick={closeMenu} 
-                className={`block px-4 py-2.5 rounded-full font-medium transition-all duration-500 ${
+                className={`block px-6 py-4 rounded-full font-medium transition-all duration-500 min-h-[44px] flex items-center ${
                   isActive('/') 
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
                     : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
@@ -130,7 +131,7 @@ const Navbar = () => {
               <Link 
                 to="/about" 
                 onClick={closeMenu} 
-                className={`block px-4 py-2.5 rounded-full font-medium transition-all duration-500 ${
+                className={`block px-6 py-4 rounded-full font-medium transition-all duration-500 min-h-[44px] flex items-center ${
                   isActive('/about') 
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
                     : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
@@ -143,7 +144,7 @@ const Navbar = () => {
               <Link 
                 to="/products" 
                 onClick={closeMenu} 
-                className={`block px-4 py-2.5 rounded-full font-medium transition-all duration-500 ${
+                className={`block px-6 py-4 rounded-full font-medium transition-all duration-500 min-h-[44px] flex items-center ${
                   isActive('/products') 
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg' 
                     : 'bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
@@ -155,7 +156,7 @@ const Navbar = () => {
             <li>
               <button 
                 onClick={scrollToContact}
-                className="block w-full text-left px-4 py-2.5 rounded-full font-medium bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent transition-all duration-500"
+                className="block w-full text-left px-6 py-4 rounded-full font-medium bg-emerald-50/50 border border-emerald-200 text-gray-700 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent transition-all duration-500 min-h-[44px] flex items-center"
               >
                 Contact
               </button>

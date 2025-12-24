@@ -46,18 +46,18 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-emerald-50/30 to-white">
       <div className="max-w-7xl mx-auto px-5">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Get In Touch</h2>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="space-y-6 md:space-y-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-6 md:mb-8">Get In Touch</h2>
             
-            <div className="space-y-6">
-              <div className="flex gap-4 group cursor-pointer p-4 rounded-xl hover:bg-emerald-50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="space-y-4 md:space-y-6">
+              <div className="flex gap-4 group cursor-pointer p-4 rounded-xl hover:bg-emerald-50 transition-all duration-300 min-h-[80px]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <i className="fas fa-map-marker-alt"></i>
                 </div>
-                <div>
+                <div className="flex-1">
                   <h4 className="text-lg font-semibold text-slate-900 mb-1 group-hover:text-emerald-600 transition-colors">Address</h4>
-                  <p className="text-slate-600">
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed">
                     Suryatantra Enterprises LLP<br />
                     S.no.: 143, Milkat No. 1094/3<br />
                     Opp. Green-Field Hotel, Sinhagad Road<br />
@@ -66,23 +66,23 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4 group cursor-pointer p-4 rounded-xl hover:bg-emerald-50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="flex gap-4 group cursor-pointer p-4 rounded-xl hover:bg-emerald-50 transition-all duration-300 min-h-[60px]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <i className="fas fa-phone"></i>
                 </div>
-                <div>
+                <div className="flex-1">
                   <h4 className="text-lg font-semibold text-slate-900 mb-1 group-hover:text-emerald-600 transition-colors">Phone</h4>
-                  <p className="text-slate-600">(+91) 9730429324</p>
+                  <p className="text-slate-600 text-sm md:text-base">(+91) 9730429324</p>
                 </div>
               </div>
 
-              <div className="flex gap-4 group cursor-pointer p-4 rounded-xl hover:bg-emerald-50 transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="flex gap-4 group cursor-pointer p-4 rounded-xl hover:bg-emerald-50 transition-all duration-300 min-h-[60px]">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                   <i className="fas fa-envelope"></i>
                 </div>
-                <div>
+                <div className="flex-1">
                   <h4 className="text-lg font-semibold text-slate-900 mb-1 group-hover:text-emerald-600 transition-colors">Email</h4>
-                  <p className="text-slate-600">suryatantraa@gmail.com</p>
+                  <p className="text-slate-600 text-sm md:text-base">suryatantraa@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -110,9 +110,9 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-white to-emerald-50/50 p-8 rounded-2xl shadow-xl border-2 border-emerald-100">
-            <h3 className="text-2xl font-semibold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-6">Enquiry</h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="bg-gradient-to-br from-white to-emerald-50/50 p-6 md:p-8 rounded-2xl shadow-xl border-2 border-emerald-100">
+            <h3 className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-6">Enquiry</h3>
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
               <div className="relative">
                 <input
                   type="text"
@@ -121,7 +121,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white hover:border-emerald-300"
+                  className="w-full px-4 py-4 md:py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white hover:border-emerald-300 text-base min-h-[44px]"
                 />
                 <i className="fas fa-user absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
               </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white hover:border-emerald-300"
+                  className="w-full px-4 py-4 md:py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white hover:border-emerald-300 text-base min-h-[44px]"
                 />
                 <i className="fas fa-phone absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
               </div>
@@ -145,7 +145,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white hover:border-emerald-300"
+                  className="w-full px-4 py-4 md:py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all bg-white hover:border-emerald-300 text-base min-h-[44px]"
                 />
                 <i className="fas fa-envelope absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
               </div>
@@ -153,18 +153,18 @@ const Contact = () => {
                 <textarea
                   name="message"
                   placeholder="Message"
-                  rows="5"
+                  rows="4"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all resize-y bg-white hover:border-emerald-300"
+                  className="w-full px-4 py-4 md:py-3 rounded-lg border-2 border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all resize-y bg-white hover:border-emerald-300 text-base min-h-[100px]"
                 ></textarea>
-                <i className="fas fa-comment absolute right-4 top-4 text-slate-400"></i>
+                <i className="fas fa-comment absolute right-4 top-5 md:top-4 text-slate-400"></i>
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group relative w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 disabled:opacity-50 shadow-lg hover:shadow-xl overflow-hidden"
+                className="group relative w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white py-4 md:py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1 disabled:opacity-50 shadow-lg hover:shadow-xl overflow-hidden min-h-[48px] text-base"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   {isSubmitting ? (
@@ -187,12 +187,12 @@ const Contact = () => {
       </div>
 
       {notification && (
-        <div className={`fixed top-24 right-5 z-50 px-6 py-4 rounded-xl shadow-2xl text-white animate-slide-in flex items-center gap-3 ${
+        <div className={`fixed top-20 left-4 right-4 md:top-24 md:left-auto md:right-5 z-50 px-4 py-3 md:px-6 md:py-4 rounded-xl shadow-2xl text-white animate-slide-in flex items-center gap-3 text-sm md:text-base max-w-md mx-auto md:mx-0 ${
           notification.type === 'success' 
             ? 'bg-gradient-to-r from-emerald-500 to-teal-500' 
             : 'bg-gradient-to-r from-red-500 to-rose-500'
         }`}>
-          <i className={`fas ${notification.type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} text-xl`}></i>
+          <i className={`fas ${notification.type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} text-lg md:text-xl`}></i>
           <span>{notification.message}</span>
         </div>
       )}

@@ -8,7 +8,7 @@ import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="min-h-screen flex flex-col bg-gradient-to-br from-emerald-600/90 via-teal-600/85 to-cyan-600/90">
         <Navbar />
         <main className="grow">

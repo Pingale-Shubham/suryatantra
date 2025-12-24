@@ -72,19 +72,19 @@ const ProductDetail = () => {
             <div className="flex flex-wrap gap-4 justify-center">
               <button 
                 onClick={() => openWhatsApp(productName)}
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all text-sm md:text-base"
               >
                 <i className="fab fa-whatsapp"></i> Order Now / Get Quote
               </button>
               <button 
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all text-sm md:text-base"
               >
                 <i className="fas fa-envelope"></i> Contact Us
               </button>
               <Link 
                 to="/products"
-                className="bg-slate-600 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                className="bg-slate-600 hover:bg-slate-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all text-sm md:text-base"
               >
                 <i className="fas fa-arrow-left"></i> Back to Products
               </Link>
@@ -142,19 +142,19 @@ const ProductDetail = () => {
               <div className="flex flex-wrap gap-4">
                 <button 
                   onClick={() => openWhatsApp(product.name)}
-                  className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                  className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all text-sm md:text-base"
                 >
                   <i className="fab fa-whatsapp"></i> Order Now
                 </button>
                 <button 
                   onClick={scrollToContact}
-                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all text-sm md:text-base"
                 >
                   <i className="fas fa-envelope"></i> Contact Us
                 </button>
                 <Link 
                   to="/products"
-                  className="bg-slate-600 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+                  className="bg-slate-600 hover:bg-slate-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all text-sm md:text-base"
                 >
                   <i className="fas fa-arrow-left"></i> Back to Products
                 </Link>
